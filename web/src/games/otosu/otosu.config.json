@@ -1,0 +1,22 @@
+{
+    "board": {
+        "columns": 10,
+        "rows": 20
+    },
+    "fall": {
+        "startMs": 800,
+        "speedUp": 0.85,
+        "minMs": 80
+    },
+    "turn": {
+        "kicks": [0, -1, 1, -2, 2]
+    },
+    "score": {
+        "lines": [0, 100, 300, 500, 800],
+        "softDropRow": 1,
+        "hardDropRow": 2
+    },
+    "level": {
+        "lines": 10
+    }
+}

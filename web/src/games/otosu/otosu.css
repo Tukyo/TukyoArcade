@@ -1,0 +1,87 @@
+/* Otosu's look: colors, sizes and layout. draw.ts reads the colors from here, so they're only written once. */
+.otosu {
+    /* One color per piece kind, plus the empty board. */
+    --otosu-I: #ff6b9d;
+    --otosu-O: #ffd166;
+    --otosu-T: #06d6a0;
+    --otosu-S: #7c83fd;
+    --otosu-Z: #ff8c42;
+    --otosu-J: #4cc9f0;
+    --otosu-L: #c77dff;
+    --otosu-empty: #16161d;
+    --otosu-text: #f2f2f2;
+    --otosu-backdrop: rgb(0 0 0 / 75%);
+
+    /* The space between squares, as a share of one square (0.08 = 8%). */
+    --otosu-gap: 0.08;
+    /* How visible the ghost (where the piece will land) is: 0 = invisible, 1 = solid. */
+    --otosu-ghost: 0.25;
+
+    /* The game fills the screen: the board in the middle, the side panel (Next, Score, Level, Lines) to its right. */
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vh;
+    color: var(--otosu-text);
+    font-family: system-ui, sans-serif;
+}
+
+/* The board fills 90% of the screen's height; its width follows from the board's shape (draw.ts). */
+.otosu-board {
+    display: block;
+    height: 90vh;
+}
+
+.otosu-side {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    min-width: 12vw;
+}
+
+.otosu-label {
+    font-size: 2vh;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+.otosu-value {
+    font-size: 5vh;
+    font-weight: 700;
+}
+
+/* The "Next" box: square, LARGEST × LARGEST squares (draw.ts). */
+.otosu-next {
+    display: block;
+    height: 12vh;
+    margin-top: 1vh;
+}
+
+/* Game over: a dark layer over everything, with the score and what OK / Back do. */
+.otosu-over {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    background: var(--otosu-backdrop);
+}
+
+.otosu-over[hidden] {
+    display: none;
+}
+
+.otosu-over-title {
+    font-size: 10vh;
+    font-weight: 800;
+}
+
+.otosu-over-hint {
+    font-size: 3vh;
+    opacity: 0.8;
+}
