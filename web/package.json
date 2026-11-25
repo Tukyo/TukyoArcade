@@ -1,0 +1,18 @@
+{
+    "name": "tukyo-arcade-web",
+    "version": "0.0.1",
+    "description": "Tukyo Arcade - family party games for the living-room TV.",
+    "private": true,
+    "type": "module",
+    "author": "Tukyo",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@types/node": "^26.6.7",
+        "typescript": "^7.0.2",
+        "vite": "^8.3.8"
+    }
+}

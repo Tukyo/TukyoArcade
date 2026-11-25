@@ -1,0 +1,21 @@
+{
+    "app": {
+        "id": "com.tukyo.arcade",
+        "sdk": 37,
+        "minSdk": 34,
+        "versionCodeEpochSeconds": 1767225600
+    },
+    "dev": {
+        "server": {
+            "host": "192.168.0.18",
+            "port": 5174,
+            "timeoutMs": 500
+        },
+        "tools": {
+            "port": 9223
+        }
+    },
+    "bundledUi": {
+        "host": "appassets.androidplatform.net"
+    }
+}
